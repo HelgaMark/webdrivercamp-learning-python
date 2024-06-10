@@ -1,0 +1,107 @@
+#0 - xpath locator
+
+//*[@id="vl-flyout-nav"]// li[contains(@class,'savedTab')]
+//li[@class='vl-flyout-nav__js-tab']/a[text()='Motors']
+//li[@class='vl-flyout-nav__js-tab']/a[text()='Electronics']
+//li[@class='vl-flyout-nav__js-tab']/a[text()='Collectibles']
+//li[@class='vl-flyout-nav__js-tab']/a[text()='Home & Garden']
+//li[@class='vl-flyout-nav__js-tab']/a[text()='Fashion']
+//li[@class='vl-flyout-nav__js-tab']/a[text()='Toys']
+//li[@class='vl-flyout-nav__js-tab']/a[text()='Sporting Goods']
+//li[@class='vl-flyout-nav__js-tab']/a[text()='Business & Industrial']
+//li[@class='vl-flyout-nav__js-tab']/a[text()='Jewelry & Watches']
+//li[@class='vl-flyout-nav__js-tab vl-flyout-nav__no-sub']/a[text()='eBay Live']
+//li[@class='vl-flyout-nav__js-tab']/a[text()='Refurbished']
+
+#1 - Find filter sections
+
+(//li[@class='x-refine__main__list '])/div[./h3[contains(.,'US Shoe Size')]]
+
+(//ul[@class='x-refine__left__nav'])[2] /li /div[./h3[contains(.,'Brand')]]
+
+(//ul[@class='x-refine__left__nav'])[2] /li/div[./h3[contains(.,'Color')]]
+
+(//ul[@class='x-refine__left__nav'])[2] /li/div[./h3[contains(.,'Upper Material')]]
+
+(//ul[@class='x-refine__left__nav'])[2] /li/div[./h3[contains(.,'Department')]]
+
+(//ul[@class='x-refine__left__nav'])[2] /li/div[./h3[contains(.,'Occasion')]]
+
+(//li[@class='x-refine__main__list '])/div[./h3[contains(.,'Condition')]]
+
+(//li[@class='x-refine__main__list '])/div[./h3[contains(.,'Price')]]
+
+(//li[@class='x-refine__main__list '])/div[./h3[contains(.,'Buying Format')]]
+
+(//li[@class='x-refine__main__list '])/div[./h3[contains(.,'Item Location')]]
+
+(//li[@class='x-refine__main__list '])/div[./h3[contains(.,'Delivery Options')]]
+
+//*[@id="x-refine__group__6"]/ul/li[2]/div[1]/a/div/div/div/span[1]
+
+(//li[@class='x-refine__main__list ']) /div[./h3[contains(.,'Show only')]]
+
+#2 - Now make it dynamic
+
+//div[@class='x-refine__select__svg']//span[contains(., '9.5')]
+
+//div[@class='x-refine__select__svg']//span[contains(., 'Nike')]
+
+//div[@class='x-refine__select__svg']//span[contains(., 'Green')]
+
+//div[@class='x-refine__select__svg']//span[contains(., 'Unisex Adults')]
+
+//div[@class='x-refine__select__svg']//span[contains(., 'Mesh')]
+
+//div[@class='x-refine__select__svg']//span[contains(., 'Formal')]
+
+//div[@class='x-refine__select__svg']//span[contains(., '$35.00 to $50.00')]
+
+//div[@class='x-refine__select__svg']//span[contains(., 'New without tags')]
+
+//div[@class='x-refine__select__svg']//span[contains(., 'Buy It Now')]
+
+//div[@class='x-refine__select__svg']//span[contains(., 'US Only')]
+
+//*[@id="x-refine__group__6"]/ul/li[2]/div[2]//span[contains(., '25 mi')]
+
+//div[@class='x-refine__select__svg']//span[contains(., 'Authorized Seller')]
+
+# 3 Add the checkboxes:
+
+//li[@class='x-refine__main__list ']//span[@class='cbx x-refine__multi-select-cbx'][contains(.,'Nike')]
+
+//li[@class='x-refine__main__list ']//span[@class='cbx x-refine__multi-select-cbx'][contains(.,'9.5')]
+
+//li[@class='x-refine__main__list ']//span[@class='cbx x-refine__multi-select-cbx'][contains(.,'Green')]
+
+//li[@class='x-refine__main__list ']//span[@class='cbx x-refine__multi-select-cbx'][contains(.,'Men')]
+
+//li[@class='x-refine__main__list ']//span[@class='cbx x-refine__multi-select-cbx'][contains(.,'Activewear')]
+
+//li[@class='x-refine__main__list ']//span[@class='cbx x-refine__multi-select-cbx'][contains(.,'$35.00 to $65.00')]
+
+(//*[@class='x-refine__select__svg'])//span[@class='cbx x-refine__multi-select-cbx'][.='Buy It Now']
+
+(//*[@class='x-refine__select__svg'])//span[@class='cbx x-refine__multi-select-cbx'][.='US Only']
+
+//div[@class='x-refine__select__svg']//span[@class='cbx x-refine__multi-select-cbx'][contains(., 'Authorized Seller')]
+
+#4 Make it case insentive:
+
+//div[@id='gh-ac-box2']//input[@type='text' and @name='_nkw' and @id='gh-ac']
+
+//div[@id='gh-ac-box2']//input[@type='text' and @name='_nkw' and @id='gh-ac' and translate(@value, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz') = 'shoes']
+
+#5 Pause it:
+
+Open DevTools on the browser
+Navigate to Console tab
+Enter: debugger;
+Open the dropdown My eBay for inspect
+Press Enter to activate debugger
+
+//div[@class='gh-menu']//a[@class='gh-eb-li-a gh-rvi-menu'][contains(text(), 'My eBay')]
+
+//a[contains(@class, 'gh-eb-oa')]
+
